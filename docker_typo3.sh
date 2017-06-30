@@ -11,7 +11,6 @@ mv /etc/php.ini.rpmnew /etc/php.ini
 sed -i 's/max_execution_time = 30/max_execution_time = 240/g' /etc/php.ini
 sed -i 's/; max_input_vars = 1000/max_input_vars = 1500/g' /etc/php.ini
 cd /var/www/webroot
-wget https://netix.dl.sourceforge.net/project/typo3/TYPO3%20Source%20and%20Dummy/TYPO3%208.7.2/typo3_src-8.7.2.tar.gz
 tar xfz typo3_src-8.7.2.tar.gz
 touch typo3_src-8.7.2/FIRST_INSTALL
 sed -i 's/webroot\/ROOT/webroot\/typo3_src-8.7.2/g' /etc/httpd/conf/httpd.conf
